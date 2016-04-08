@@ -7,10 +7,30 @@
 
 #####导入：
 
+
+
 ```
+手动导入：
+
 SwpNetworking 文件夹 导入 项目 中, 依赖  AFNetworking3.0 以上版本
 #import "SwpNetworking.h"
 ```
+---
+
+```ruby
+
+CocoaPods 导入:
+
+使用  CocoaPods 会自动 pod AFNetworking
+
+pod search SwpNetworking
+
+pod 'SwpNetworking'
+
+#import <SwpNetworking/SwpNetworking.h>
+
+```
+---
 
 #####[AFNetworking](https://github.com/AFNetworking/AFNetworking)
 
