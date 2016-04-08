@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '7.0'
+
+inhibit_all_warnings!
+
+target "Demo" do
+
+pod 'AFNetworking'	# AFNetworking 网络请求
+
+end
