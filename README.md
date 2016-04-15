@@ -41,7 +41,7 @@ pod 'SwpNetworking'
 获取 数据 
 
 /*!
- *  @author swp_song, 2016-04-07 14:08:45
+ *  @author swp_song
  *
  *  @brief  swpPOST:parameters:swpResultSuccess:swpResultError:     ( 请求网络获取数据 <POST> )
  *
@@ -72,7 +72,7 @@ NSString *urlString = @"获取数据url";
 
 单文件上传 
 /*!
- *  @author swp_song, 2016-04-07 14:45:47
+ *  @author swp_song
  *
  *  @brief  swpPOSTAddFile:parameters:fileName:fileData:swpNetworkingSuccess:swpNetworkingError ( 请求网络获上传文件 单文件上传 <POST> )
  *
@@ -99,7 +99,7 @@ NSString *urlString = @"获取数据url";
 多文件上传 上传字段相同 ( 应用场景 多图 上传  )
 
 /*!
- *  @author swp_song, 2016-04-07 15:57:09
+ *  @author swp_song
  *
  *  @brief  swpPOSTAddFiles:parameters:fileName:fileDatas:swpNetworkingSuccess:swpNetworkingError   ( 请求网络获上传文件 多文件上传, 文件名称相同使用该方法 <POST> )
  *
@@ -124,7 +124,7 @@ NSString *urlString = @"获取数据url";
 ```Objective-C
 多文件上传 上传字段不相同 ( 应用场景 音频 视频 文件上传  )
 /*!
- *  @author swp_song, 2016-04-07 16:26:22
+ *  @author swp_song
  *
  *  @brief  swpPOSTAddWithFiles:parametersfileNames:fileDatas:swpNetworkingSuccess:swpNetworkingSuccess:swpNetworkingError: ( 请求网络获上传文件 多文件上传, 文件名称不相同相同使用该方法  <POST> )
  *
