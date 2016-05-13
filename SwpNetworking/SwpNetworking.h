@@ -9,22 +9,18 @@
 #import <Foundation/Foundation.h>
 
 /*! ---------------------- Tool       ---------------------- !*/
+#import "SwpNetworkingVariableType.h"
 #import <AFNetworking/AFNetworking.h>     // AFNetworking 网络库
 /*! ---------------------- Tool       ---------------------- !*/
 
 NS_ASSUME_NONNULL_BEGIN
-
-/*! SwpNetworking 的请求成功 回调 Block !*/
-typedef void(^SwpNetworkingSuccessHandle)(NSURLSessionDataTask *task, id resultObject);
-/*! SwpNetworking 的请求失败 回调 Block !*/
-typedef void(^SwpNetworkingErrorHandle)(NSURLSessionDataTask *task, NSError *error, NSString *errorMessage);
 
 @interface SwpNetworking : NSObject
 
 
 #pragma mark - SwpNetworking Tool Methods
 /*!
- *  @author swp_song, 2016-04-07 14:08:45
+ *  @author swp_song
  *
  *  @brief  swpPOST:parameters:swpResultSuccess:swpResultError:     ( 请求网络获取数据 <POST> )
  *
@@ -39,7 +35,7 @@ typedef void(^SwpNetworkingErrorHandle)(NSURLSessionDataTask *task, NSError *err
 + (void)swpPOST:(NSString *)URLString parameters:(nullable NSDictionary *)parameters swpNetworkingSuccess:(SwpNetworkingSuccessHandle)swpNetworkingSuccess swpNetworkingError:(SwpNetworkingErrorHandle)swpNetworkingError;
 
 /*!
- *  @author swp_song, 2016-04-07 14:45:47
+ *  @author swp_song
  *
  *  @brief  swpPOSTAddFile:parameters:fileName:fileData:swpNetworkingSuccess:swpNetworkingError ( 请求网络获上传文件 单文件上传 <POST> )
  *
@@ -59,7 +55,7 @@ typedef void(^SwpNetworkingErrorHandle)(NSURLSessionDataTask *task, NSError *err
 + (void)swpPOSTAddFile:(NSString *)URLString parameters:(NSDictionary *)parameters fileName:(NSString *)fileName fileData:(NSData *)fileData swpNetworkingSuccess:(SwpNetworkingSuccessHandle)swpNetworkingSuccess swpNetworkingError:(SwpNetworkingErrorHandle)swpNetworkingError;
 
 /*!
- *  @author swp_song, 2016-04-07 15:57:09
+ *  @author swp_song
  *
  *  @brief  swpPOSTAddFiles:parameters:fileName:fileDatas:swpNetworkingSuccess:swpNetworkingError   ( 请求网络获上传文件 多文件上传, 文件名称相同使用该方法 <POST> )
  *
@@ -96,6 +92,30 @@ typedef void(^SwpNetworkingErrorHandle)(NSURLSessionDataTask *task, NSError *err
  *  @param  swpNetworkingError              请求获取数据失败
  */
 + (void)swpPOSTAddWithFiles:(NSString *)URLString parameters:(NSDictionary *)parameters fileNames:(NSArray *)fileNames fileDatas:(NSArray *)fileDatas swpNetworkingSuccess:(SwpNetworkingSuccessHandle)swpNetworkingSuccess swpNetworkingError:(SwpNetworkingErrorHandle)swpNetworkingError;
+
+/*!
+ *  @author swp_song
+ *
+ *  @brief  swpDownloadFile:swpDownloadProgress:swpCompletionHandler:   ( 请求网络 < 下载图片方法 > )
+ *
+ *  @param  URLString                       请求的 url
+ *
+ *  @param  swpDownloadProgress             下载进度
+ *
+ *  @param  swpCompletionHandler            下载回调
+ */
++ (void)swpDownloadFile:(NSString *)URLString swpDownloadProgress:(void(^)(SwpDownloadProgress swpDownloadProgress))swpDownloadProgress swpCompletionHandler:(void(^)(NSString *filePath, NSString *error))swpCompletionHandler;
+
+/*!
+ *  @author swp_song
+ *
+ *  @brief swpAFNetworkingTest:parametersisEncrypt:  ( AFNetworking 测试方法 )
+ *
+ *  @param  URLString                   请求的 url
+ *
+ *  @param  parameters                  请求 需要传递的参数
+ */
++ (void)swpAFNetworkingTest:(NSString *)URLString parameters:(NSDictionary *)parameters;
 
 @end
 

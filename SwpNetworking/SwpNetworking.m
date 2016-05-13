@@ -8,6 +8,7 @@
 
 #import "SwpNetworking.h"
 
+#import "SwpNetworkingTools.h"
 
 @interface SwpNetworking ()
 
@@ -21,7 +22,7 @@
 
 #pragma mark - SwpNetworking Tool Methods
 /*!
- *  @author swp_song, 2016-04-07 14:08:45
+ *  @author swp_song
  *
  *  @brief  swpPOST:parameters:swpResultSuccess:swpResultError:     ( 请求网络获取数据 <POST> )
  *
@@ -41,7 +42,7 @@
     __block NSDictionary *resultObject  = [NSDictionary dictionary];
     
     // 显示 状态栏 请求数据的菊花
-    [swpNetworking swpNetworkingSettingNetworkPicture:YES];
+    [SwpNetworking swpNetworkingSettingNetworkPicture:YES];
     
     // 发起请求
     [swpNetworking.swpSessionManager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -50,16 +51,16 @@
         resultObject = [swpNetworking requestDispose:responseObject];
         swpNetworkingSuccess(task, resultObject);
         
-        [swpNetworking swpNetworkingSettingNetworkPicture:NO];
+        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        swpNetworkingError(task, error, [swpNetworking getErrorMessage:error]);
-        [swpNetworking swpNetworkingSettingNetworkPicture:NO];
+        swpNetworkingError(task, error, [SwpNetworking getErrorMessage:error]);
+        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
     }];
 }
 
 /*!
- *  @author swp_song, 2016-04-07 14:45:47
+ *  @author swp_song
  *
  *  @brief  swpPOSTAddFile:parameters:fileName:fileData:swpNetworkingSuccess:swpNetworkingError ( 请求网络获上传文件 单文件上传 <POST> )
  *
@@ -85,7 +86,7 @@
     __block NSDictionary *resultObject  = [NSDictionary dictionary];
     
     // 显示 状态栏 请求数据的菊花
-    [swpNetworking swpNetworkingSettingNetworkPicture:YES];
+    [SwpNetworking swpNetworkingSettingNetworkPicture:YES];
     
     // 发起请求
     [swpNetworking.swpSessionManager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
@@ -95,15 +96,15 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         resultObject = [swpNetworking requestDispose:responseObject];
         swpNetworkingSuccess(task, resultObject);
-        [swpNetworking swpNetworkingSettingNetworkPicture:NO];
+        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        swpNetworkingError(task, error, [swpNetworking getErrorMessage:error]);
-        [swpNetworking swpNetworkingSettingNetworkPicture:NO];
+        swpNetworkingError(task, error, [SwpNetworking getErrorMessage:error]);
+        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
     }];
 }
 
 /*!
- *  @author swp_song, 2016-04-07 15:57:09
+ *  @author swp_song
  *
  *  @brief  swpPOSTAddFiles:parameters:fileName:fileDatas:swpNetworkingSuccess:swpNetworkingError   ( 请求网络获上传文件 多文件上传, 文件名称相同使用该方法 <POST> )
  *
@@ -128,7 +129,7 @@
     __block NSDictionary *resultObject  = [NSDictionary dictionary];
     
     // 显示 状态栏 请求数据的菊花
-    [swpNetworking swpNetworkingSettingNetworkPicture:YES];
+    [SwpNetworking swpNetworkingSettingNetworkPicture:YES];
     
     // 发起请求
     [swpNetworking.swpSessionManager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
@@ -141,16 +142,16 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         resultObject = [swpNetworking requestDispose:responseObject];
         swpNetworkingSuccess(task, resultObject);
-        [swpNetworking swpNetworkingSettingNetworkPicture:NO];
+        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        swpNetworkingError(task, error, [swpNetworking getErrorMessage:error]);
-        [swpNetworking swpNetworkingSettingNetworkPicture:NO];
+        swpNetworkingError(task, error, [SwpNetworking getErrorMessage:error]);
+        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
     }];
     
 }
 
 /*!
- *  @author swp_song, 2016-04-07 16:26:22
+ *  @author swp_song
  *
  *  @brief  swpPOSTAddWithFiles:parametersfileNames:fileDatas:swpNetworkingSuccess:swpNetworkingSuccess:swpNetworkingError: ( 请求网络获上传文件 多文件上传, 文件名称不相同相同使用该方法  <POST> )
  *
@@ -174,7 +175,7 @@
     __block NSDictionary *resultObject  = [NSDictionary dictionary];
     
     // 显示 状态栏 请求数据的菊花
-    [swpNetworking swpNetworkingSettingNetworkPicture:YES];
+    [SwpNetworking swpNetworkingSettingNetworkPicture:YES];
     
     // 发起请求
     [swpNetworking.swpSessionManager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
@@ -186,13 +187,64 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         resultObject = [swpNetworking requestDispose:responseObject];
         swpNetworkingSuccess(task, resultObject);
-        [swpNetworking swpNetworkingSettingNetworkPicture:NO];
+        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        swpNetworkingError(task, error, [swpNetworking getErrorMessage:error]);
-        [swpNetworking swpNetworkingSettingNetworkPicture:NO];
+        swpNetworkingError(task, error, [SwpNetworking getErrorMessage:error]);
+        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
     }];
     
 }
+
+/*!
+ *  @author swp_song
+ *
+ *  @brief  swpDownloadFile:swpDownloadProgress:swpCompletionHandler:   ( 请求网络 < 下载图片方法 > )
+ *
+ *  @param  URLString                       请求的 url
+ *
+ *  @param  swpDownloadProgress             下载进度
+ *
+ *  @param  swpCompletionHandler            下载回调
+ */
++ (void)swpDownloadFile:(NSString *)URLString swpDownloadProgress:(void(^)(SwpDownloadProgress swpDownloadProgress))swpDownloadProgress swpCompletionHandler:(void(^)(NSString *filePath, NSString *error))swpCompletionHandler {
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSMutableURLRequest       *request       = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
+    AFHTTPSessionManager     *manager        = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
+    // 下载
+    [SwpNetworking swpNetworkingSettingNetworkPicture:YES];
+    NSURLSessionDownloadTask *downloadTask   = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        swpDownloadProgress(SwpDownloadProgressMake(downloadProgress.fractionCompleted, downloadProgress.totalUnitCount, downloadProgress.completedUnitCount));
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        //拼接存放路径
+        NSURL *pathURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+        return [pathURL URLByAppendingPathComponent:[response suggestedFilename]];
+        
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        NSString *downloadFilePath = [SwpNetworkingTools swpNetworkingToolsDownloadFilePathDispose:filePath];
+        if (error) [[NSFileManager defaultManager] removeItemAtPath:downloadFilePath error:nil];
+        swpCompletionHandler(downloadFilePath, [SwpNetworking getErrorMessage:error]);
+        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
+    }];
+    
+    // 开始 下载
+    [downloadTask resume];
+}
+
+
+/*!
+ *  @author swp_song
+ *
+ *  @brief swpAFNetworkingTest:parametersisEncrypt:  ( AFNetworking 测试方法 )
+ *
+ *  @param  URLString                   请求的 url
+ *
+ *  @param  parameters                  请求 需要传递的参数
+ */
++ (void)swpAFNetworkingTest:(NSString *)URLString parameters:(NSDictionary *)parameters {
+    NSLog(@"This is AFNetworking Test Method");
+}
+
 
 #pragma mark - Init SwpNetworking Method
 /*!
@@ -235,7 +287,7 @@
  *
  *  @param  isShow                  networkActivityIndicatorVisible YES 显示，NO 隐藏
  */
-- (void)swpNetworkingSettingNetworkPicture:(BOOL)isShow {
++ (void)swpNetworkingSettingNetworkPicture:(BOOL)isShow {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = isShow;
 }
 
@@ -248,7 +300,7 @@
  *
  *  @return NSString
  */
-- (NSString *)getErrorMessage:(NSError *)error {
++ (NSString *)getErrorMessage:(NSError *)error {
     return error == nil ? nil : [NSString stringWithFormat:@"错误代码%ld \n 错误信息%@", (long)error.code, error.localizedDescription];
 }
 

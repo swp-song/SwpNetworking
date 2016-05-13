@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D9F2EB81CE59F0E003A8F8E /* SwpNetworkingVariableType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F2EB71CE59F0E003A8F8E /* SwpNetworkingVariableType.m */; };
+		2D9F2EBB1CE5C78B003A8F8E /* SwpNetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F2EBA1CE5C78B003A8F8E /* SwpNetworkingTools.m */; };
+		2D9F2EBE1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F2EBD1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.m */; };
 		463ADF641CB73CB60036CC9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 463ADF631CB73CB60036CC9F /* main.m */; };
 		463ADF671CB73CB60036CC9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 463ADF661CB73CB60036CC9F /* AppDelegate.m */; };
 		463ADF6A1CB73CB60036CC9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463ADF691CB73CB60036CC9F /* ViewController.m */; };
@@ -19,6 +22,12 @@
 
 /* Begin PBXFileReference section */
 		2A8BA5B81DBDC23D68D6D291 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D9F2EB61CE59F0E003A8F8E /* SwpNetworkingVariableType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworkingVariableType.h; sourceTree = "<group>"; };
+		2D9F2EB71CE59F0E003A8F8E /* SwpNetworkingVariableType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworkingVariableType.m; sourceTree = "<group>"; };
+		2D9F2EB91CE5C78B003A8F8E /* SwpNetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworkingTools.h; sourceTree = "<group>"; };
+		2D9F2EBA1CE5C78B003A8F8E /* SwpNetworkingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworkingTools.m; sourceTree = "<group>"; };
+		2D9F2EBC1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SVProgressHUD.h"; sourceTree = "<group>"; };
+		2D9F2EBD1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SVProgressHUD.m"; sourceTree = "<group>"; };
 		4150E427F3ABF6B09C8A6EBE /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		463ADF5F1CB73CB60036CC9F /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		463ADF631CB73CB60036CC9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +87,8 @@
 		463ADF611CB73CB60036CC9F /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				2D9F2EBC1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.h */,
+				2D9F2EBD1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.m */,
 				463ADF651CB73CB60036CC9F /* AppDelegate.h */,
 				463ADF661CB73CB60036CC9F /* AppDelegate.m */,
 				463ADF681CB73CB60036CC9F /* ViewController.h */,
@@ -104,6 +115,10 @@
 			children = (
 				463ADF7A1CB7419A0036CC9F /* SwpNetworking.h */,
 				463ADF7B1CB7419A0036CC9F /* SwpNetworking.m */,
+				2D9F2EB61CE59F0E003A8F8E /* SwpNetworkingVariableType.h */,
+				2D9F2EB71CE59F0E003A8F8E /* SwpNetworkingVariableType.m */,
+				2D9F2EB91CE5C78B003A8F8E /* SwpNetworkingTools.h */,
+				2D9F2EBA1CE5C78B003A8F8E /* SwpNetworkingTools.m */,
 			);
 			name = SwpNetworking;
 			path = ../SwpNetworking;
@@ -239,8 +254,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				463ADF7C1CB7419A0036CC9F /* SwpNetworking.m in Sources */,
+				2D9F2EB81CE59F0E003A8F8E /* SwpNetworkingVariableType.m in Sources */,
+				2D9F2EBE1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.m in Sources */,
 				463ADF6A1CB73CB60036CC9F /* ViewController.m in Sources */,
 				463ADF671CB73CB60036CC9F /* AppDelegate.m in Sources */,
+				2D9F2EBB1CE5C78B003A8F8E /* SwpNetworkingTools.m in Sources */,
 				463ADF641CB73CB60036CC9F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
