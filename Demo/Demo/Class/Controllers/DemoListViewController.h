@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  DemoListViewController.h
 //  Demo
 //
 //  Created by swp_song on 16/5/16.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface DemoListViewController : UIViewController
 
 @end
-

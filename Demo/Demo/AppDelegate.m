@@ -2,11 +2,14 @@
 //  AppDelegate.m
 //  Demo
 //
-//  Created by songweiping on 16/4/8.
+//  Created by swp_song on 16/5/16.
 //  Copyright © 2016年 swp_song. All rights reserved.
 //
 
 #import "AppDelegate.h"
+
+#import "DemoViewController.h"
+#import "DemoNavigationController.h"
 
 #import "AppDelegate+SVProgressHUD.h"
 
@@ -18,9 +21,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
     
     [AppDelegate demoSetSVProgressHUD];
+    
+    self.window                    = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    self.window.backgroundColor    = [UIColor whiteColor];
+    self.window.rootViewController = [[DemoNavigationController alloc] initWithRootViewController:[DemoViewController new]];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

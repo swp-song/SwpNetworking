@@ -7,144 +7,198 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D9F2EB81CE59F0E003A8F8E /* SwpNetworkingVariableType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F2EB71CE59F0E003A8F8E /* SwpNetworkingVariableType.m */; };
-		2D9F2EBB1CE5C78B003A8F8E /* SwpNetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F2EBA1CE5C78B003A8F8E /* SwpNetworkingTools.m */; };
-		2D9F2EBE1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F2EBD1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.m */; };
-		463ADF641CB73CB60036CC9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 463ADF631CB73CB60036CC9F /* main.m */; };
-		463ADF671CB73CB60036CC9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 463ADF661CB73CB60036CC9F /* AppDelegate.m */; };
-		463ADF6A1CB73CB60036CC9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463ADF691CB73CB60036CC9F /* ViewController.m */; };
-		463ADF6D1CB73CB60036CC9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463ADF6B1CB73CB60036CC9F /* Main.storyboard */; };
-		463ADF6F1CB73CB60036CC9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 463ADF6E1CB73CB60036CC9F /* Assets.xcassets */; };
-		463ADF721CB73CB60036CC9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463ADF701CB73CB60036CC9F /* LaunchScreen.storyboard */; };
-		463ADF7C1CB7419A0036CC9F /* SwpNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 463ADF7B1CB7419A0036CC9F /* SwpNetworking.m */; };
-		F3C534615528D4EF57D14904 /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8BA5B81DBDC23D68D6D291 /* libPods-Demo.a */; };
+		2D88EE631CE9A8FD00E7E91C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE621CE9A8FD00E7E91C /* main.m */; };
+		2D88EE661CE9A8FD00E7E91C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE651CE9A8FD00E7E91C /* AppDelegate.m */; };
+		2D88EE681CE9A8FD00E7E91C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D88EE671CE9A8FD00E7E91C /* Assets.xcassets */; };
+		2D88EE6B1CE9A8FD00E7E91C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D88EE691CE9A8FD00E7E91C /* LaunchScreen.storyboard */; };
+		2D88EE7F1CE9AC2700E7E91C /* DemoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE7E1CE9AC2700E7E91C /* DemoModel.m */; };
+		2D88EE881CE9AFF200E7E91C /* DemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EE871CE9AFF200E7E91C /* DemoCell.m */; };
+		2D88EEA71CE9C52F00E7E91C /* DataDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EEA01CE9C52F00E7E91C /* DataDownloadViewController.m */; };
+		2D88EEA81CE9C52F00E7E91C /* DataRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EEA21CE9C52F00E7E91C /* DataRequestViewController.m */; };
+		2D88EEA91CE9C52F00E7E91C /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EEA41CE9C52F00E7E91C /* DemoNavigationController.m */; };
+		2D88EEAA1CE9C52F00E7E91C /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EEA61CE9C52F00E7E91C /* DemoViewController.m */; };
+		2DEC5EE01CE9CBF20073619A /* SwpNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC5EDB1CE9CBF20073619A /* SwpNetworking.m */; };
+		2DEC5EE11CE9CBF20073619A /* SwpNetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC5EDD1CE9CBF20073619A /* SwpNetworkingTools.m */; };
+		2DEC5EE21CE9CBF20073619A /* SwpNetworkingVariableType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC5EDF1CE9CBF20073619A /* SwpNetworkingVariableType.m */; };
+		2DEC5EE51CE9CE580073619A /* AppDelegate+SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC5EE41CE9CE580073619A /* AppDelegate+SVProgressHUD.m */; };
+		5C93933F638CB6E57082E222 /* libPods-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C7EF6E8C9051FC65FC587F /* libPods-Demo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A8BA5B81DBDC23D68D6D291 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D9F2EB61CE59F0E003A8F8E /* SwpNetworkingVariableType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworkingVariableType.h; sourceTree = "<group>"; };
-		2D9F2EB71CE59F0E003A8F8E /* SwpNetworkingVariableType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworkingVariableType.m; sourceTree = "<group>"; };
-		2D9F2EB91CE5C78B003A8F8E /* SwpNetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworkingTools.h; sourceTree = "<group>"; };
-		2D9F2EBA1CE5C78B003A8F8E /* SwpNetworkingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworkingTools.m; sourceTree = "<group>"; };
-		2D9F2EBC1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SVProgressHUD.h"; sourceTree = "<group>"; };
-		2D9F2EBD1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SVProgressHUD.m"; sourceTree = "<group>"; };
-		4150E427F3ABF6B09C8A6EBE /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		463ADF5F1CB73CB60036CC9F /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		463ADF631CB73CB60036CC9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		463ADF651CB73CB60036CC9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		463ADF661CB73CB60036CC9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		463ADF681CB73CB60036CC9F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		463ADF691CB73CB60036CC9F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		463ADF6C1CB73CB60036CC9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		463ADF6E1CB73CB60036CC9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		463ADF711CB73CB60036CC9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		463ADF731CB73CB60036CC9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		463ADF7A1CB7419A0036CC9F /* SwpNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworking.h; sourceTree = "<group>"; };
-		463ADF7B1CB7419A0036CC9F /* SwpNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworking.m; sourceTree = "<group>"; };
-		A86864545EC8AC8F2E92C521 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		2D88EE5E1CE9A8FD00E7E91C /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D88EE621CE9A8FD00E7E91C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D88EE641CE9A8FD00E7E91C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2D88EE651CE9A8FD00E7E91C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D88EE671CE9A8FD00E7E91C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D88EE6A1CE9A8FD00E7E91C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D88EE6C1CE9A8FD00E7E91C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D88EE7D1CE9AC2700E7E91C /* DemoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoModel.h; sourceTree = "<group>"; };
+		2D88EE7E1CE9AC2700E7E91C /* DemoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoModel.m; sourceTree = "<group>"; };
+		2D88EE861CE9AFF200E7E91C /* DemoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoCell.h; sourceTree = "<group>"; };
+		2D88EE871CE9AFF200E7E91C /* DemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoCell.m; sourceTree = "<group>"; };
+		2D88EE9F1CE9C52F00E7E91C /* DataDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataDownloadViewController.h; sourceTree = "<group>"; };
+		2D88EEA01CE9C52F00E7E91C /* DataDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataDownloadViewController.m; sourceTree = "<group>"; };
+		2D88EEA11CE9C52F00E7E91C /* DataRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequestViewController.h; sourceTree = "<group>"; };
+		2D88EEA21CE9C52F00E7E91C /* DataRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequestViewController.m; sourceTree = "<group>"; };
+		2D88EEA31CE9C52F00E7E91C /* DemoNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoNavigationController.h; sourceTree = "<group>"; };
+		2D88EEA41CE9C52F00E7E91C /* DemoNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoNavigationController.m; sourceTree = "<group>"; };
+		2D88EEA51CE9C52F00E7E91C /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		2D88EEA61CE9C52F00E7E91C /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		2DEC5EDA1CE9CBF20073619A /* SwpNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworking.h; sourceTree = "<group>"; };
+		2DEC5EDB1CE9CBF20073619A /* SwpNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworking.m; sourceTree = "<group>"; };
+		2DEC5EDC1CE9CBF20073619A /* SwpNetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworkingTools.h; sourceTree = "<group>"; };
+		2DEC5EDD1CE9CBF20073619A /* SwpNetworkingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworkingTools.m; sourceTree = "<group>"; };
+		2DEC5EDE1CE9CBF20073619A /* SwpNetworkingVariableType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworkingVariableType.h; sourceTree = "<group>"; };
+		2DEC5EDF1CE9CBF20073619A /* SwpNetworkingVariableType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworkingVariableType.m; sourceTree = "<group>"; };
+		2DEC5EE31CE9CE580073619A /* AppDelegate+SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SVProgressHUD.h"; sourceTree = "<group>"; };
+		2DEC5EE41CE9CE580073619A /* AppDelegate+SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SVProgressHUD.m"; sourceTree = "<group>"; };
+		5418C28E464935D13B8865C5 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		87C63861E065CB83B37B4B89 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		99C7EF6E8C9051FC65FC587F /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		463ADF5C1CB73CB60036CC9F /* Frameworks */ = {
+		2D88EE5B1CE9A8FD00E7E91C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3C534615528D4EF57D14904 /* libPods-Demo.a in Frameworks */,
+				5C93933F638CB6E57082E222 /* libPods-Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00350A04217C081AD040C72B /* Pods */ = {
+		03A05B50E1E1625C89FE577A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4150E427F3ABF6B09C8A6EBE /* Pods-Demo.debug.xcconfig */,
-				A86864545EC8AC8F2E92C521 /* Pods-Demo.release.xcconfig */,
+				87C63861E065CB83B37B4B89 /* Pods-Demo.debug.xcconfig */,
+				5418C28E464935D13B8865C5 /* Pods-Demo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		463ADF561CB73CB60036CC9F = {
+		14A4DE38D4CCA14953FBEBCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				463ADF791CB7419A0036CC9F /* SwpNetworking */,
-				463ADF611CB73CB60036CC9F /* Demo */,
-				463ADF601CB73CB60036CC9F /* Products */,
-				00350A04217C081AD040C72B /* Pods */,
-				86301993985D5B964DE464C9 /* Frameworks */,
+				99C7EF6E8C9051FC65FC587F /* libPods-Demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D88EE551CE9A8FD00E7E91C = {
+			isa = PBXGroup;
+			children = (
+				2D88EE601CE9A8FD00E7E91C /* Demo */,
+				2D88EE5F1CE9A8FD00E7E91C /* Products */,
+				03A05B50E1E1625C89FE577A /* Pods */,
+				14A4DE38D4CCA14953FBEBCD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		463ADF601CB73CB60036CC9F /* Products */ = {
+		2D88EE5F1CE9A8FD00E7E91C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				463ADF5F1CB73CB60036CC9F /* Demo.app */,
+				2D88EE5E1CE9A8FD00E7E91C /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		463ADF611CB73CB60036CC9F /* Demo */ = {
+		2D88EE601CE9A8FD00E7E91C /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				2D9F2EBC1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.h */,
-				2D9F2EBD1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.m */,
-				463ADF651CB73CB60036CC9F /* AppDelegate.h */,
-				463ADF661CB73CB60036CC9F /* AppDelegate.m */,
-				463ADF681CB73CB60036CC9F /* ViewController.h */,
-				463ADF691CB73CB60036CC9F /* ViewController.m */,
-				463ADF6B1CB73CB60036CC9F /* Main.storyboard */,
-				463ADF6E1CB73CB60036CC9F /* Assets.xcassets */,
-				463ADF701CB73CB60036CC9F /* LaunchScreen.storyboard */,
-				463ADF731CB73CB60036CC9F /* Info.plist */,
-				463ADF621CB73CB60036CC9F /* Supporting Files */,
+				2DEC5ED91CE9CBF20073619A /* SwpNetworking */,
+				2D88EE731CE9AA1100E7E91C /* Class */,
+				2DEC5EE31CE9CE580073619A /* AppDelegate+SVProgressHUD.h */,
+				2DEC5EE41CE9CE580073619A /* AppDelegate+SVProgressHUD.m */,
+				2D88EE641CE9A8FD00E7E91C /* AppDelegate.h */,
+				2D88EE651CE9A8FD00E7E91C /* AppDelegate.m */,
+				2D88EE671CE9A8FD00E7E91C /* Assets.xcassets */,
+				2D88EE691CE9A8FD00E7E91C /* LaunchScreen.storyboard */,
+				2D88EE6C1CE9A8FD00E7E91C /* Info.plist */,
+				2D88EE611CE9A8FD00E7E91C /* Supporting Files */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		463ADF621CB73CB60036CC9F /* Supporting Files */ = {
+		2D88EE611CE9A8FD00E7E91C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				463ADF631CB73CB60036CC9F /* main.m */,
+				2D88EE621CE9A8FD00E7E91C /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		463ADF791CB7419A0036CC9F /* SwpNetworking */ = {
+		2D88EE731CE9AA1100E7E91C /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				463ADF7A1CB7419A0036CC9F /* SwpNetworking.h */,
-				463ADF7B1CB7419A0036CC9F /* SwpNetworking.m */,
-				2D9F2EB61CE59F0E003A8F8E /* SwpNetworkingVariableType.h */,
-				2D9F2EB71CE59F0E003A8F8E /* SwpNetworkingVariableType.m */,
-				2D9F2EB91CE5C78B003A8F8E /* SwpNetworkingTools.h */,
-				2D9F2EBA1CE5C78B003A8F8E /* SwpNetworkingTools.m */,
+				2D88EE741CE9AA1100E7E91C /* Controllers */,
+				2D88EE751CE9AA1100E7E91C /* Models */,
+				2D88EE761CE9AA1100E7E91C /* Views */,
 			);
-			name = SwpNetworking;
-			path = ../SwpNetworking;
+			path = Class;
 			sourceTree = "<group>";
 		};
-		86301993985D5B964DE464C9 /* Frameworks */ = {
+		2D88EE741CE9AA1100E7E91C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2A8BA5B81DBDC23D68D6D291 /* libPods-Demo.a */,
+				2D88EE9F1CE9C52F00E7E91C /* DataDownloadViewController.h */,
+				2D88EEA01CE9C52F00E7E91C /* DataDownloadViewController.m */,
+				2D88EEA11CE9C52F00E7E91C /* DataRequestViewController.h */,
+				2D88EEA21CE9C52F00E7E91C /* DataRequestViewController.m */,
+				2D88EEA31CE9C52F00E7E91C /* DemoNavigationController.h */,
+				2D88EEA41CE9C52F00E7E91C /* DemoNavigationController.m */,
+				2D88EEA51CE9C52F00E7E91C /* DemoViewController.h */,
+				2D88EEA61CE9C52F00E7E91C /* DemoViewController.m */,
 			);
-			name = Frameworks;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2D88EE751CE9AA1100E7E91C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE7D1CE9AC2700E7E91C /* DemoModel.h */,
+				2D88EE7E1CE9AC2700E7E91C /* DemoModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D88EE761CE9AA1100E7E91C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D88EE861CE9AFF200E7E91C /* DemoCell.h */,
+				2D88EE871CE9AFF200E7E91C /* DemoCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2DEC5ED91CE9CBF20073619A /* SwpNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				2DEC5EDA1CE9CBF20073619A /* SwpNetworking.h */,
+				2DEC5EDB1CE9CBF20073619A /* SwpNetworking.m */,
+				2DEC5EDC1CE9CBF20073619A /* SwpNetworkingTools.h */,
+				2DEC5EDD1CE9CBF20073619A /* SwpNetworkingTools.m */,
+				2DEC5EDE1CE9CBF20073619A /* SwpNetworkingVariableType.h */,
+				2DEC5EDF1CE9CBF20073619A /* SwpNetworkingVariableType.m */,
+			);
+			name = SwpNetworking;
+			path = ../../SwpNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		463ADF5E1CB73CB60036CC9F /* Demo */ = {
+		2D88EE5D1CE9A8FD00E7E91C /* Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 463ADF761CB73CB60036CC9F /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildConfigurationList = 2D88EE6F1CE9A8FD00E7E91C /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
-				37847B7D6A24663BE1628182 /* 📦 Check Pods Manifest.lock */,
-				463ADF5B1CB73CB60036CC9F /* Sources */,
-				463ADF5C1CB73CB60036CC9F /* Frameworks */,
-				463ADF5D1CB73CB60036CC9F /* Resources */,
-				7A5B62F488DCD325EC811D25 /* 📦 Embed Pods Frameworks */,
-				F04A14EA9793DA3138062FAF /* 📦 Copy Pods Resources */,
+				B9F58EA6250360802F0D8C1B /* 📦 Check Pods Manifest.lock */,
+				2D88EE5A1CE9A8FD00E7E91C /* Sources */,
+				2D88EE5B1CE9A8FD00E7E91C /* Frameworks */,
+				2D88EE5C1CE9A8FD00E7E91C /* Resources */,
+				E206F04410FE793C5B360BFC /* 📦 Embed Pods Frameworks */,
+				0AA955D809B7B662801F6074 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,24 +206,24 @@
 			);
 			name = Demo;
 			productName = Demo;
-			productReference = 463ADF5F1CB73CB60036CC9F /* Demo.app */;
+			productReference = 2D88EE5E1CE9A8FD00E7E91C /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		463ADF571CB73CB60036CC9F /* Project object */ = {
+		2D88EE561CE9A8FD00E7E91C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = swp_song;
 				TargetAttributes = {
-					463ADF5E1CB73CB60036CC9F = {
-						CreatedOnToolsVersion = 7.3;
+					2D88EE5D1CE9A8FD00E7E91C = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 463ADF5A1CB73CB60036CC9F /* Build configuration list for PBXProject "Demo" */;
+			buildConfigurationList = 2D88EE591CE9A8FD00E7E91C /* Build configuration list for PBXProject "Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -177,61 +231,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 463ADF561CB73CB60036CC9F;
-			productRefGroup = 463ADF601CB73CB60036CC9F /* Products */;
+			mainGroup = 2D88EE551CE9A8FD00E7E91C;
+			productRefGroup = 2D88EE5F1CE9A8FD00E7E91C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				463ADF5E1CB73CB60036CC9F /* Demo */,
+				2D88EE5D1CE9A8FD00E7E91C /* Demo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		463ADF5D1CB73CB60036CC9F /* Resources */ = {
+		2D88EE5C1CE9A8FD00E7E91C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				463ADF721CB73CB60036CC9F /* LaunchScreen.storyboard in Resources */,
-				463ADF6F1CB73CB60036CC9F /* Assets.xcassets in Resources */,
-				463ADF6D1CB73CB60036CC9F /* Main.storyboard in Resources */,
+				2D88EE681CE9A8FD00E7E91C /* Assets.xcassets in Resources */,
+				2D88EE6B1CE9A8FD00E7E91C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		37847B7D6A24663BE1628182 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7A5B62F488DCD325EC811D25 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F04A14EA9793DA3138062FAF /* 📦 Copy Pods Resources */ = {
+		0AA955D809B7B662801F6074 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,38 +269,65 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B9F58EA6250360802F0D8C1B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E206F04410FE793C5B360BFC /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		463ADF5B1CB73CB60036CC9F /* Sources */ = {
+		2D88EE5A1CE9A8FD00E7E91C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				463ADF7C1CB7419A0036CC9F /* SwpNetworking.m in Sources */,
-				2D9F2EB81CE59F0E003A8F8E /* SwpNetworkingVariableType.m in Sources */,
-				2D9F2EBE1CE5DD38003A8F8E /* AppDelegate+SVProgressHUD.m in Sources */,
-				463ADF6A1CB73CB60036CC9F /* ViewController.m in Sources */,
-				463ADF671CB73CB60036CC9F /* AppDelegate.m in Sources */,
-				2D9F2EBB1CE5C78B003A8F8E /* SwpNetworkingTools.m in Sources */,
-				463ADF641CB73CB60036CC9F /* main.m in Sources */,
+				2DEC5EE51CE9CE580073619A /* AppDelegate+SVProgressHUD.m in Sources */,
+				2D88EEA91CE9C52F00E7E91C /* DemoNavigationController.m in Sources */,
+				2D88EEA81CE9C52F00E7E91C /* DataRequestViewController.m in Sources */,
+				2D88EE7F1CE9AC2700E7E91C /* DemoModel.m in Sources */,
+				2D88EEAA1CE9C52F00E7E91C /* DemoViewController.m in Sources */,
+				2D88EE881CE9AFF200E7E91C /* DemoCell.m in Sources */,
+				2D88EE661CE9A8FD00E7E91C /* AppDelegate.m in Sources */,
+				2D88EEA71CE9C52F00E7E91C /* DataDownloadViewController.m in Sources */,
+				2D88EE631CE9A8FD00E7E91C /* main.m in Sources */,
+				2DEC5EE11CE9CBF20073619A /* SwpNetworkingTools.m in Sources */,
+				2DEC5EE21CE9CBF20073619A /* SwpNetworkingVariableType.m in Sources */,
+				2DEC5EE01CE9CBF20073619A /* SwpNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		463ADF6B1CB73CB60036CC9F /* Main.storyboard */ = {
+		2D88EE691CE9A8FD00E7E91C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				463ADF6C1CB73CB60036CC9F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		463ADF701CB73CB60036CC9F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				463ADF711CB73CB60036CC9F /* Base */,
+				2D88EE6A1CE9A8FD00E7E91C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -285,7 +335,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		463ADF741CB73CB60036CC9F /* Debug */ = {
+		2D88EE6D1CE9A8FD00E7E91C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -329,7 +379,7 @@
 			};
 			name = Debug;
 		};
-		463ADF751CB73CB60036CC9F /* Release */ = {
+		2D88EE6E1CE9A8FD00E7E91C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -367,26 +417,26 @@
 			};
 			name = Release;
 		};
-		463ADF771CB73CB60036CC9F /* Debug */ = {
+		2D88EE701CE9A8FD00E7E91C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4150E427F3ABF6B09C8A6EBE /* Pods-Demo.debug.xcconfig */;
+			baseConfigurationReference = 87C63861E065CB83B37B4B89 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = "swp-song.Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		463ADF781CB73CB60036CC9F /* Release */ = {
+		2D88EE711CE9A8FD00E7E91C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A86864545EC8AC8F2E92C521 /* Pods-Demo.release.xcconfig */;
+			baseConfigurationReference = 5418C28E464935D13B8865C5 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = "swp-song.Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -394,25 +444,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		463ADF5A1CB73CB60036CC9F /* Build configuration list for PBXProject "Demo" */ = {
+		2D88EE591CE9A8FD00E7E91C /* Build configuration list for PBXProject "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				463ADF741CB73CB60036CC9F /* Debug */,
-				463ADF751CB73CB60036CC9F /* Release */,
+				2D88EE6D1CE9A8FD00E7E91C /* Debug */,
+				2D88EE6E1CE9A8FD00E7E91C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		463ADF761CB73CB60036CC9F /* Build configuration list for PBXNativeTarget "Demo" */ = {
+		2D88EE6F1CE9A8FD00E7E91C /* Build configuration list for PBXNativeTarget "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				463ADF771CB73CB60036CC9F /* Debug */,
-				463ADF781CB73CB60036CC9F /* Release */,
+				2D88EE701CE9A8FD00E7E91C /* Debug */,
+				2D88EE711CE9A8FD00E7E91C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 463ADF571CB73CB60036CC9F /* Project object */;
+	rootObject = 2D88EE561CE9A8FD00E7E91C /* Project object */;
 }
