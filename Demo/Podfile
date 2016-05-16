@@ -1,0 +1,16 @@
+project 'Demo.xcodeproj'
+
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+# Uncomment this line to define a global platform for your project
+
+target 'Demo' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Demo
+  pod 'AFNetworking'	  # AFNetworking 网络请求
+  pod 'SVProgressHUD' 	# 提示信息库
+  pod 'Masonry'         # Masonry 自动布局框架
+
+end
