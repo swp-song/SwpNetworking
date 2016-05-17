@@ -15,7 +15,6 @@
 
 static NSString * const kDownloadUrl = @"https://raw.githubusercontent.com/swp-song/SwpNetworking/master/Screenshot/demImage01.jpeg";
 
-
 @interface DataDownloadViewController ()
 
 @property (nonatomic, strong) UIButton    *downloadButton;
@@ -76,7 +75,6 @@ static NSString * const kDownloadUrl = @"https://raw.githubusercontent.com/swp-s
  *  @brief  setUIAutoLayout (设置控件的自动布局)
  */
 - (void)setUIAutoLayout {
-    
     
     [self.downloadButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.view).mas_offset(UIEdgeInsetsMake(10, 0, 0, 0));
