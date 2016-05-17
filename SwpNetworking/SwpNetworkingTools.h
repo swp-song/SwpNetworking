@@ -22,5 +22,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)swpNetworkingToolsDownloadFilePathDispose:(NSURL *)filePath;
 
+/*!
+ *  @author swp_song
+ *
+ *  @brief  swpNetworkingToolsGetDownloadFileName:  ( 取出 下载 文件名称 )
+ *
+ *  @param  filePath
+ *
+ *  @return NSString
+ */
++ (NSString *)swpNetworkingToolsGetDownloadFileName:(NSURL *)filePath;
+
 @end
 NS_ASSUME_NONNULL_END

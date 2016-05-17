@@ -3,9 +3,19 @@
 
 
 #### 封装 AFNetworking 3.0
+`简单封装 AFNetworking 3.0, 让网络请求更简单`
+[AFNetworking下载地址](https://github.com/AFNetworking/AFNetworking)
+
+##### 效果：
+![(网络获取数据)](https://raw.githubusercontent.com/swp-song/SwpNetworking/master/Screenshot/dataRequest.gif) ![(网络下载文件)](https://raw.githubusercontent.com/swp-song/SwpNetworking/master/Screenshot/downloadFile.gif) ![(验证网络环境)](https://raw.githubusercontent.com/swp-song/SwpNetworking/master/Screenshot/checkNetwork.gif)
 
 
-#####导入：
+
+
+
+
+
+##### 导入：
 
 
 
@@ -32,119 +42,37 @@ pod 'SwpNetworking'
 ```
 ---
 
-#####[AFNetworking](https://github.com/AFNetworking/AFNetworking)
 
-#####使用:
+
+##### 更新:
+
+```
+1. 1.0.2 ---> 简单封装了 请求数据, 单文件 | 多文件 上传 
+2. 1.0.3 ---> 新增下载文件, 验证网络环境
+```
+
+##### 使用:
+
 ---
 ```Objective-C
 
-获取 数据 
-
-/*!
- *  @author swp_song
- *
- *  @brief  swpPOST:parameters:swpResultSuccess:swpResultError:     ( 请求网络获取数据 <POST> )
- *
- *  @param  URLString                       请求的 url
- *
- *  @param  parameters                      请求 需要传递的参数     ( 和后台一致 )
- *
- *  @param  swpNetworkingSuccess            请求获取数据成功
- *
- *  @param  swpNetworkingError              请求获取数据失败
- */
- 
+// 网络 获取 数据
 + (void)swpPOST:(NSString *)URLString parameters:(nullable NSDictionary *)parameters swpNetworkingSuccess:(SwpNetworkingSuccessHandle)swpNetworkingSuccess swpNetworkingError:(SwpNetworkingErrorHandle)swpNetworkingError;
 
-使用方法:
-
-NSString *urlString = @"获取数据url";
-[SwpNetworking swpPOST:urlString parameters:nil swpNetworkingSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
-	NSLog(@"%@", resultObject);
-} swpNetworkingError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error, NSString * _Nonnull errorMessage) {
-	NSLog(@"%@", errorMessage);
-}];
+更多方法请参考 Demo
 
 ```
----
 
+##### 新增方法 
 ```Objective-C
+// 下载文件
++ (void)swpDownloadFile:(NSString *)URLString swpDownloadProgress:(void(^)(SwpDownloadProgress swpDownloadProgress))swpDownloadProgress swpCompletionHandler:(void(^)(NSString *filePath, NSString *fileName,  NSString *error))swpCompletionHandler;
 
-单文件上传 
-/*!
- *  @author swp_song
- *
- *  @brief  swpPOSTAddFile:parameters:fileName:fileData:swpNetworkingSuccess:swpNetworkingError ( 请求网络获上传文件 单文件上传 <POST> )
- *
- *  @param  URLString                       请求的 url
- *
- *  @param  parameters                      请求 需要传递的参数          ( 可以传 nil )
- *
- *  @param  fileName                        请求 上传文件的名称          ( 和后台一致 )
- *
- *  @param  fileData                        请求 上传文件的数据流
- *
- *  @param  swpNetworkingSuccess            请求获取数据成功
- *
- *  @param  swpNetworkingError              请求获取数据失败
- *
- */
-+ (void)swpPOSTAddFile:(NSString *)URLString parameters:(NSDictionary *)parameters fileName:(NSString *)fileName fileData:(NSData *)fileData swpNetworkingSuccess:(SwpNetworkingSuccessHandle)swpNetworkingSuccess swpNetworkingError:(SwpNetworkingErrorHandle)swpNetworkingError; 
-
+// 验证网络环境
++ (void)swpNetworkingReachabilityStatusChangeBlock:(void(^)(SwpNetworkingReachabilityStatus swpResultStatus))swpResultStatus;
 ```
 ---
-
-```Objective-C
-
-多文件上传 上传字段相同 ( 应用场景 多图 上传  )
-
-/*!
- *  @author swp_song
- *
- *  @brief  swpPOSTAddFiles:parameters:fileName:fileDatas:swpNetworkingSuccess:swpNetworkingError   ( 请求网络获上传文件 多文件上传, 文件名称相同使用该方法 <POST> )
- *
- *  @param  URLString                       请求的 url
- *
- *  @param  parameters                      请求 需要传递的参数          ( 可以传 nil )
- *
- *  @param  fileName                        请求 上传文件的名称          ( 和后台一致 )
- *
- *  @param  fileDatas                       请求 上传文件的流数组
- *
- *  @param  swpNetworkingSuccess            请求获取数据成功
- *
- *  @param  swpNetworkingError              请求获取数据失败
- *
- */
-+ (void)swpPOSTAddFiles:(NSString *)URLString parameters:(NSDictionary *)parameters fileName:(NSString *)fileName fileDatas:(NSArray *)fileDatas swpNetworkingSuccess:(SwpNetworkingSuccessHandle)swpNetworkingSuccess swpNetworkingError:(SwpNetworkingErrorHandle)swpNetworkingError;
-
-```
----
-
-```Objective-C
-多文件上传 上传字段不相同 ( 应用场景 音频 视频 文件上传  )
-/*!
- *  @author swp_song
- *
- *  @brief  swpPOSTAddWithFiles:parametersfileNames:fileDatas:swpNetworkingSuccess:swpNetworkingSuccess:swpNetworkingError: ( 请求网络获上传文件 多文件上传, 文件名称不相同相同使用该方法  <POST> )
- *
- *  @param  URLString                       请求的 url
- *
- *  @param  parameters                      请求 需要传递的参数          ( 可以传 nil )
- *
- *  @param  fileNames                       请求 上传文件的名称数组      ( 和后台一致 )
- *
- *  @param  fileDatas                       请求 上传文件的流数组
- *
- *  @param  swpNetworkingSuccess            请求获取数据成功
- *
- *  @param  swpNetworkingError              请求获取数据失败
- */
-+ (void)swpPOSTAddWithFiles:(NSString *)URLString parameters:(NSDictionary *)parameters fileNames:(NSArray *)fileNames fileDatas:(NSArray *)fileDatas swpNetworkingSuccess:(SwpNetworkingSuccessHandle)swpNetworkingSuccess swpNetworkingError:(SwpNetworkingErrorHandle)swpNetworkingError;
-
-```
----
-#####备注:
+##### 备注:
 ```
 交流 群号 : 85400118
 ```

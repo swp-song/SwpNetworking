@@ -123,9 +123,9 @@ static NSString * const kDownloadUrl = @"https://raw.githubusercontent.com/swp-s
     [SwpNetworking swpDownloadFile:fileURL swpDownloadProgress:^(SwpDownloadProgress swpDownloadProgress) {
         NSLog(@"swpFractionCompleted ==> %f, swpTotalUnitCount ==> %lld, swpCompletedUnitCount ==> %lld", swpDownloadProgress.swpFractionCompleted, swpDownloadProgress.swpTotalUnitCount, swpDownloadProgress.swpCompletedUnitCount);
         [SVProgressHUD showProgress:swpDownloadProgress.swpFractionCompleted status:@"下载中..."];
-    } swpCompletionHandler:^(NSString * _Nonnull filePath, NSString * _Nonnull error) {
+    } swpCompletionHandler:^(NSString * _Nonnull filePath, NSString * _Nonnull fileName, NSString * _Nonnull error) {
         error == nil ? [SVProgressHUD dismiss] : [SVProgressHUD showErrorWithStatus:error];
-        NSLog(@"filePath ==> %@, erro ==> %@", filePath, error);
+        NSLog(@"filePath ==> %@, fileName ==>%@, erro ==> %@", filePath, fileName, error);
         self.downloadImageView.image = [UIImage imageNamed:filePath];
         [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
     }];

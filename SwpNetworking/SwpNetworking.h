@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 /*! ---------------------- Tool       ---------------------- !*/
-#import "SwpNetworkingVariableType.h"
 #import <AFNetworking/AFNetworking.h>     // AFNetworking 网络库
+#import "SwpNetworkingVariableType.h"     // 自定 参数 
 /*! ---------------------- Tool       ---------------------- !*/
 
 NS_ASSUME_NONNULL_BEGIN
@@ -75,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)swpPOSTAddFiles:(NSString *)URLString parameters:(NSDictionary *)parameters fileName:(NSString *)fileName fileDatas:(NSArray *)fileDatas swpNetworkingSuccess:(SwpNetworkingSuccessHandle)swpNetworkingSuccess swpNetworkingError:(SwpNetworkingErrorHandle)swpNetworkingError;
 
 /*!
- *  @author swp_song, 2016-04-07 16:26:22
+ *  @author swp_song
  *
  *  @brief  swpPOSTAddWithFiles:parametersfileNames:fileDatas:swpNetworkingSuccess:swpNetworkingSuccess:swpNetworkingError: ( 请求网络获上传文件 多文件上传, 文件名称不相同相同使用该方法  <POST> )
  *
@@ -102,16 +102,16 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param  swpDownloadProgress             下载进度
  *
- *  @param  swpCompletionHandler            下载回调
+ *  @param  swpCompletionHandler            下载回调    ( 成功 | 失败 回调, 成功 Error 为 nil )
  */
-+ (void)swpDownloadFile:(NSString *)URLString swpDownloadProgress:(void(^)(SwpDownloadProgress swpDownloadProgress))swpDownloadProgress swpCompletionHandler:(void(^)(NSString *filePath, NSString *error))swpCompletionHandler;
++ (void)swpDownloadFile:(NSString *)URLString swpDownloadProgress:(void(^)(SwpDownloadProgress swpDownloadProgress))swpDownloadProgress swpCompletionHandler:(void(^)(NSString *filePath, NSString *fileName,  NSString *error))swpCompletionHandler;
 
 /*!
  *  @author swp_song
  *
- *  @brief  swpRequestReachabilityStatusChangeBlock:    ( 验证 网路 环境 )
+ *  @brief  swpNetworkingReachabilityStatusChangeBlock: ( 验证 网路 环境 )
  *
- *  @param  swpResultStatus
+ *  @param  swpNetworkingStatus
  */
 + (void)swpNetworkingReachabilityStatusChangeBlock:(void(^)(SwpNetworkingReachabilityStatus swpResultStatus))swpResultStatus;
 

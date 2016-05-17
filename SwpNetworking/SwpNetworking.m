@@ -8,7 +8,9 @@
 
 #import "SwpNetworking.h"
 
-#import "SwpNetworkingTools.h"
+/*! ---------------------- Tool       ---------------------- !*/
+#import "SwpNetworkingTools.h"          // 工具
+/*! ---------------------- Tool       ---------------------- !*/
 
 @interface SwpNetworking ()
 
@@ -204,30 +206,30 @@
  *
  *  @param  swpDownloadProgress             下载进度
  *
- *  @param  swpCompletionHandler            下载回调
+ *  @param  swpCompletionHandler            下载回调    ( 成功 | 失败 回调, 成功 Error 为 nil )
  */
-+ (void)swpDownloadFile:(NSString *)URLString swpDownloadProgress:(void(^)(SwpDownloadProgress swpDownloadProgress))swpDownloadProgress swpCompletionHandler:(void(^)(NSString *filePath, NSString *error))swpCompletionHandler {
++ (void)swpDownloadFile:(NSString *)URLString swpDownloadProgress:(void(^)(SwpDownloadProgress swpDownloadProgress))swpDownloadProgress swpCompletionHandler:(void(^)(NSString *filePath, NSString *fileName,  NSString *error))swpCompletionHandler {
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSMutableURLRequest       *request       = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
-    AFHTTPSessionManager     *manager        = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
-    // 下载
+    AFHTTPSessionManager      *manager       = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
+    // 发起 请求
     [SwpNetworking swpNetworkingSettingNetworkPicture:YES];
     NSURLSessionDownloadTask *downloadTask   = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
         swpDownloadProgress(SwpDownloadProgressMake(downloadProgress.fractionCompleted, downloadProgress.totalUnitCount, downloadProgress.completedUnitCount));
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        //拼接存放路径
+        // 返回 文件 路径
         NSURL *pathURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
         return [pathURL URLByAppendingPathComponent:[response suggestedFilename]];
         
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         NSString *downloadFilePath = [SwpNetworkingTools swpNetworkingToolsDownloadFilePathDispose:filePath];
         if (error) [[NSFileManager defaultManager] removeItemAtPath:downloadFilePath error:nil];
-        swpCompletionHandler(downloadFilePath, [SwpNetworking getErrorMessage:error]);
+        swpCompletionHandler(downloadFilePath, [SwpNetworkingTools swpNetworkingToolsGetDownloadFileName:filePath], [SwpNetworking getErrorMessage:error]);
         [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
     }];
     
-    // 开始 下载
+    // 开始 请求
     [downloadTask resume];
 }
 
@@ -235,9 +237,9 @@
 /*!
  *  @author swp_song
  *
- *  @brief  swpNetworkingReachabilityStatusChangeBlock:    ( 验证 网路 环境 )
+ *  @brief  swpNetworkingReachabilityStatusChangeBlock: ( 验证 网路 环境 )
  *
- *  @param  swpResultStatus
+ *  @param  swpNetworkingStatus
  */
 + (void)swpNetworkingReachabilityStatusChangeBlock:(void(^)(SwpNetworkingReachabilityStatus swpNetworkingStatus))swpNetworkingStatus {
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
