@@ -11,9 +11,22 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface DemoModel : NSObject
 
+/*! 显示 title !*/
 @property (nonatomic, copy  ) NSString *demoTitle;
+/*! 跳转控制器 !*/
 @property (nonatomic, assign) Class    demoJumpController;
 
+/*!
+ *  @author swp_song
+ *
+ *  @brief  demoInitWithTitle:demoJumpController:   ( 工厂方法 )
+ *
+ *  @param  demoTitle
+ (
+ *  @param  demoJumpController
+ *
+ *  @return DemoModel
+ */
 + (instancetype)demoInitWithTitle:(NSString *)demoTitle demoJumpController:(Class)demoJumpController;
 
 

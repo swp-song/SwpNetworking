@@ -14,8 +14,20 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DemoCell : UITableViewCell
 
 
+/*! Demo 数据模型 !*/
 @property (nonatomic, strong) DemoModel *demo;
 
+/*!
+ *  @author swp_song
+ *
+ *  @brief  demoCellWithTableView:forCellReuseIdentifier:   ( 快速 初始化 一个 cell )
+ *
+ *  @param  tableView
+ *
+ *  @param  identifier
+ *
+ *  @return DemoCell
+ */
 + (instancetype)demoCellWithTableView:(UITableView *)tableView forCellReuseIdentifier:(NSString *)identifier;
 
 @end

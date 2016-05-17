@@ -109,6 +109,15 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  @author swp_song
  *
+ *  @brief  swpRequestReachabilityStatusChangeBlock:    ( 验证 网路 环境 )
+ *
+ *  @param  swpResultStatus
+ */
++ (void)swpNetworkingReachabilityStatusChangeBlock:(void(^)(SwpNetworkingReachabilityStatus swpResultStatus))swpResultStatus;
+
+/*!
+ *  @author swp_song
+ *
  *  @brief swpAFNetworkingTest:parametersisEncrypt:  ( AFNetworking 测试方法 )
  *
  *  @param  URLString                   请求的 url

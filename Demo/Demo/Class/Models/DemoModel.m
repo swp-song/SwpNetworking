@@ -10,6 +10,17 @@
 
 @implementation DemoModel
 
+/*!
+ *  @author swp_song
+ *
+ *  @brief  demoInitWithTitle:demoJumpController:   ( 工厂方法 )
+ *
+ *  @param  demoTitle
+ (
+ *  @param  demoJumpController
+ *
+ *  @return DemoModel
+ */
 + (instancetype)demoInitWithTitle:(NSString *)demoTitle demoJumpController:(Class)demoJumpController {
     
     DemoModel *demoModel         = [[self alloc] init];

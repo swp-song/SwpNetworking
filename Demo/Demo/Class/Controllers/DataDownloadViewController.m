@@ -8,17 +8,24 @@
 
 #import "DataDownloadViewController.h"
 
-#import <Masonry/Masonry.h>
-#import "SwpNetworking.h"
-#import <SVProgressHUD/SVProgressHUD.h>
+/*! ---------------------- Tool       ---------------------- !*/
+#import "SwpNetworking.h"                   // 网络 获取数据
+#import <Masonry/Masonry.h>                 // 自动布局
+#import <SVProgressHUD/SVProgressHUD.h>     // 提示
+/*! ---------------------- Tool       ---------------------- !*/
 
 
-static NSString * const kDownloadUrl = @"https://raw.githubusercontent.com/swp-song/SwpNetworking/master/Screenshot/demImage01.jpeg";
+static NSString * const kDownloadUrl = @"https://raw.githubusercontent.com/swp-song/SwpNetworking/master/Screenshot/demImage.png";
 
 @interface DataDownloadViewController ()
 
+#pragma mark - UI   Propertys
+/*! ---------------------- UI   Property  ---------------------- !*/
+/*! 下载文件 按钮       !*/
 @property (nonatomic, strong) UIButton    *downloadButton;
+/*! 显示 下载 图片view  !*/
 @property (nonatomic, strong) UIImageView *downloadImageView;
+/*! ---------------------- UI   Property  ---------------------- !*/
 
 @end
 
@@ -37,14 +44,18 @@ static NSString * const kDownloadUrl = @"https://raw.githubusercontent.com/swp-s
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Setting UI Methods
+- (void)dealloc {
+    [SVProgressHUD dismiss];
+    NSLog(@"%s", __FUNCTION__);
+}
+
+#pragma mark - Set UI Methods
 /*!
  *  @author swp_song
  *
  *  @brief  设置 UI 控件
  */
 - (void)setUI {
-    
     [self setNavigationBar];
     [self setUpUI];
     [self setUIAutoLayout];
@@ -88,10 +99,24 @@ static NSString * const kDownloadUrl = @"https://raw.githubusercontent.com/swp-s
     }];
 }
 
-- (void)didButton:(UIButton *)button {
+/*!
+ *  @author swp_song
+ *
+ *  @brief  clickButton:  ( 按钮 点击 点击事件 )
+ *
+ *  @param  button
+ */
+- (void)clickButton:(UIButton *)button {
     [self downloadFile:kDownloadUrl];
 }
 
+/*!
+ *  @author swp_song
+ *
+ *  @brief  downloadFile:   ( 下载 文件  )
+ *
+ *  @param  fileURL
+ */
 - (void)downloadFile:(NSString *)fileURL {
     
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
@@ -106,6 +131,7 @@ static NSString * const kDownloadUrl = @"https://raw.githubusercontent.com/swp-s
     }];
 }
 
+#pragma mark - Init UI Methods
 - (UIButton *)downloadButton {
     
     if (!_downloadButton) {
@@ -114,7 +140,7 @@ static NSString * const kDownloadUrl = @"https://raw.githubusercontent.com/swp-s
         [_downloadButton setTitle:@"点击下载图片" forState:UIControlStateHighlighted];
         [_downloadButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _downloadButton.titleLabel.font = [UIFont systemFontOfSize:12];
-        [_downloadButton addTarget:self action:@selector(didButton:) forControlEvents:UIControlEventTouchUpInside];
+        [_downloadButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _downloadButton;
 }

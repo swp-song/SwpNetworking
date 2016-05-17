@@ -17,6 +17,7 @@
 		2D88EEA81CE9C52F00E7E91C /* DataRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EEA21CE9C52F00E7E91C /* DataRequestViewController.m */; };
 		2D88EEA91CE9C52F00E7E91C /* DemoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EEA41CE9C52F00E7E91C /* DemoNavigationController.m */; };
 		2D88EEAA1CE9C52F00E7E91C /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D88EEA61CE9C52F00E7E91C /* DemoViewController.m */; };
+		2D9BD28A1CEAC10C00F3DAB5 /* CheckNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9BD2891CEAC10C00F3DAB5 /* CheckNetworkViewController.m */; };
 		2DEC5EE01CE9CBF20073619A /* SwpNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC5EDB1CE9CBF20073619A /* SwpNetworking.m */; };
 		2DEC5EE11CE9CBF20073619A /* SwpNetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC5EDD1CE9CBF20073619A /* SwpNetworkingTools.m */; };
 		2DEC5EE21CE9CBF20073619A /* SwpNetworkingVariableType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC5EDF1CE9CBF20073619A /* SwpNetworkingVariableType.m */; };
@@ -44,6 +45,8 @@
 		2D88EEA41CE9C52F00E7E91C /* DemoNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoNavigationController.m; sourceTree = "<group>"; };
 		2D88EEA51CE9C52F00E7E91C /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		2D88EEA61CE9C52F00E7E91C /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		2D9BD2881CEAC10C00F3DAB5 /* CheckNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckNetworkViewController.h; sourceTree = "<group>"; };
+		2D9BD2891CEAC10C00F3DAB5 /* CheckNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckNetworkViewController.m; sourceTree = "<group>"; };
 		2DEC5EDA1CE9CBF20073619A /* SwpNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworking.h; sourceTree = "<group>"; };
 		2DEC5EDB1CE9CBF20073619A /* SwpNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworking.m; sourceTree = "<group>"; };
 		2DEC5EDC1CE9CBF20073619A /* SwpNetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworkingTools.h; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 		2D88EE741CE9AA1100E7E91C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2D9BD2881CEAC10C00F3DAB5 /* CheckNetworkViewController.h */,
+				2D9BD2891CEAC10C00F3DAB5 /* CheckNetworkViewController.m */,
 				2D88EE9F1CE9C52F00E7E91C /* DataDownloadViewController.h */,
 				2D88EEA01CE9C52F00E7E91C /* DataDownloadViewController.m */,
 				2D88EEA11CE9C52F00E7E91C /* DataRequestViewController.h */,
@@ -313,6 +318,7 @@
 				2D88EEAA1CE9C52F00E7E91C /* DemoViewController.m in Sources */,
 				2D88EE881CE9AFF200E7E91C /* DemoCell.m in Sources */,
 				2D88EE661CE9A8FD00E7E91C /* AppDelegate.m in Sources */,
+				2D9BD28A1CEAC10C00F3DAB5 /* CheckNetworkViewController.m in Sources */,
 				2D88EEA71CE9C52F00E7E91C /* DataDownloadViewController.m in Sources */,
 				2D88EE631CE9A8FD00E7E91C /* main.m in Sources */,
 				2DEC5EE11CE9CBF20073619A /* SwpNetworkingTools.m in Sources */,

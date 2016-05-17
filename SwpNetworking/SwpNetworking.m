@@ -235,6 +235,38 @@
 /*!
  *  @author swp_song
  *
+ *  @brief  swpNetworkingReachabilityStatusChangeBlock:    ( 验证 网路 环境 )
+ *
+ *  @param  swpResultStatus
+ */
++ (void)swpNetworkingReachabilityStatusChangeBlock:(void(^)(SwpNetworkingReachabilityStatus swpNetworkingStatus))swpNetworkingStatus {
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown:
+                swpNetworkingStatus(SwpNetworkingReachabilityStatusUnknown);
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+                swpNetworkingStatus(SwpNetworkingReachabilityStatusNotReachable);
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+                
+                swpNetworkingStatus(SwpNetworkingReachabilityStatusReachableViaWWAN);
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                swpNetworkingStatus(SwpNetworkingReachabilityStatusReachableViaWiFi);
+                break;
+            default:
+                break;
+        }
+    }];
+}
+
+
+/*!
+ *  @author swp_song
+ *
  *  @brief swpAFNetworkingTest:parametersisEncrypt:  ( AFNetworking 测试方法 )
  *
  *  @param  URLString                   请求的 url
@@ -244,7 +276,6 @@
 + (void)swpAFNetworkingTest:(NSString *)URLString parameters:(NSDictionary *)parameters {
     NSLog(@"This is AFNetworking Test Method");
 }
-
 
 #pragma mark - Init SwpNetworking Method
 /*!

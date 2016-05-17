@@ -42,6 +42,14 @@ typedef struct SwpDownloadProgress SwpDownloadProgress;
  */
 SwpDownloadProgress SwpDownloadProgressMake(double swpFractionCompleted, swp_int64_t swpTotalUnitCount, swp_int64_t swpCompletedUnitCount);
 
+/*! 网络状态  !*/
+typedef NS_ENUM(NSInteger, SwpNetworkingReachabilityStatus) {
+    SwpNetworkingReachabilityStatusUnknown          = -1,   /*! 未知网络    !*/
+    SwpNetworkingReachabilityStatusNotReachable     = 0,    /*! 无网络      !*/
+    SwpNetworkingReachabilityStatusReachableViaWWAN = 1,    /*! WWAN        !*/
+    SwpNetworkingReachabilityStatusReachableViaWiFi = 2,    /*! WiFi        !*/
+};
+
 @end
 
 NS_ASSUME_NONNULL_END
