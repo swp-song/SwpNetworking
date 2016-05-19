@@ -44,20 +44,18 @@
     __block NSDictionary *resultObject  = [NSDictionary dictionary];
     
     // 显示 状态栏 请求数据的菊花
-    [SwpNetworking swpNetworkingSettingNetworkPicture:YES];
+    [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:YES];
     
     // 发起请求
     [swpNetworking.swpSessionManager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        resultObject = [swpNetworking requestDispose:responseObject];
+        resultObject = [SwpNetworkingTools swpNetworkingToolsRequestDispose:responseObject];
         swpNetworkingSuccess(task, resultObject);
-        
-        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
-        
+        [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:NO];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        swpNetworkingError(task, error, [SwpNetworking getErrorMessage:error]);
-        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
+        swpNetworkingError(task, error, [SwpNetworkingTools swpNetworkingToolsGetErrorMessage:error]);
+        [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:NO];
     }];
 }
 
@@ -88,7 +86,7 @@
     __block NSDictionary *resultObject  = [NSDictionary dictionary];
     
     // 显示 状态栏 请求数据的菊花
-    [SwpNetworking swpNetworkingSettingNetworkPicture:YES];
+    [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:YES];
     
     // 发起请求
     [swpNetworking.swpSessionManager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
@@ -96,12 +94,12 @@
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        resultObject = [swpNetworking requestDispose:responseObject];
+        resultObject = [SwpNetworkingTools swpNetworkingToolsRequestDispose:responseObject];
         swpNetworkingSuccess(task, resultObject);
-        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
+        [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:NO];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        swpNetworkingError(task, error, [SwpNetworking getErrorMessage:error]);
-        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
+        swpNetworkingError(task, error, [SwpNetworkingTools swpNetworkingToolsGetErrorMessage:error]);
+        [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:NO];
     }];
 }
 
@@ -131,7 +129,7 @@
     __block NSDictionary *resultObject  = [NSDictionary dictionary];
     
     // 显示 状态栏 请求数据的菊花
-    [SwpNetworking swpNetworkingSettingNetworkPicture:YES];
+    [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:YES];
     
     // 发起请求
     [swpNetworking.swpSessionManager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
@@ -142,12 +140,12 @@
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        resultObject = [swpNetworking requestDispose:responseObject];
+        resultObject = [SwpNetworkingTools swpNetworkingToolsRequestDispose:responseObject];
         swpNetworkingSuccess(task, resultObject);
-        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
+        [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:NO];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        swpNetworkingError(task, error, [SwpNetworking getErrorMessage:error]);
-        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
+        swpNetworkingError(task, error, [SwpNetworkingTools swpNetworkingToolsGetErrorMessage:error]);
+        [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:NO];
     }];
     
 }
@@ -177,7 +175,7 @@
     __block NSDictionary *resultObject  = [NSDictionary dictionary];
     
     // 显示 状态栏 请求数据的菊花
-    [SwpNetworking swpNetworkingSettingNetworkPicture:YES];
+    [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:YES];
     
     // 发起请求
     [swpNetworking.swpSessionManager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
@@ -187,12 +185,12 @@
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        resultObject = [swpNetworking requestDispose:responseObject];
+        resultObject = [SwpNetworkingTools swpNetworkingToolsRequestDispose:responseObject];
         swpNetworkingSuccess(task, resultObject);
-        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
+        [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:NO];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        swpNetworkingError(task, error, [SwpNetworking getErrorMessage:error]);
-        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
+        swpNetworkingError(task, error, [SwpNetworkingTools swpNetworkingToolsGetErrorMessage:error]);
+        [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:NO];
     }];
     
 }
@@ -214,7 +212,7 @@
     NSMutableURLRequest       *request       = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
     AFHTTPSessionManager      *manager       = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
     // 发起 请求
-    [SwpNetworking swpNetworkingSettingNetworkPicture:YES];
+    [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:YES];
     NSURLSessionDownloadTask *downloadTask   = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
         swpDownloadProgress(SwpDownloadProgressMake(downloadProgress.fractionCompleted, downloadProgress.totalUnitCount, downloadProgress.completedUnitCount));
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
@@ -225,8 +223,8 @@
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         NSString *downloadFilePath = [SwpNetworkingTools swpNetworkingToolsDownloadFilePathDispose:filePath];
         if (error) [[NSFileManager defaultManager] removeItemAtPath:downloadFilePath error:nil];
-        swpCompletionHandler(downloadFilePath, [SwpNetworkingTools swpNetworkingToolsGetDownloadFileName:filePath], [SwpNetworking getErrorMessage:error]);
-        [SwpNetworking swpNetworkingSettingNetworkPicture:NO];
+        swpCompletionHandler(downloadFilePath, [SwpNetworkingTools swpNetworkingToolsGetDownloadFileName:filePath], [SwpNetworkingTools swpNetworkingToolsGetErrorMessage:error]);
+        [SwpNetworkingTools swpNetworkingToolsSetNetworkActivityIndicatorVisible:NO];
     }];
     
     // 开始 请求
@@ -311,62 +309,6 @@
     return self;
 }
 
-#pragma mark - SwpNetworking Tool Methods
-
-/*!
- *  @author swp_song, 2016-04-08 09:34:16
- *
- *  @brief  settingNetworkPicture:   ( 显示 或隐藏 网络获取数据时 UINavigationBar 上的图标(转圈的菊花) )
- *
- *  @param  isShow                  networkActivityIndicatorVisible YES 显示，NO 隐藏
- */
-+ (void)swpNetworkingSettingNetworkPicture:(BOOL)isShow {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = isShow;
-}
-
-/*!
- *  @author swp_song, 2016-04-07 16:01:10
- *
- *  @brief  getErrorMessage:    ( 获取 错误信息 )
- *
- *  @param  error
- *
- *  @return NSString
- */
-+ (NSString *)getErrorMessage:(NSError *)error {
-    return error == nil ? nil : [NSString stringWithFormat:@"错误代码%ld \n 错误信息%@", (long)error.code, error.localizedDescription];
-}
-
-#pragma mark - SwpNetworking Data Dispose Method
-/*!
- *  @author swp_song, 2016-04-08 09:34:03
- *
- *  @brief  requestDispose:      ( 返回 网络 结果集 处理 )
- *
- *  @param  responseObject
- *
- *  @return NSDictionary
- */
-- (NSDictionary *)requestDispose:(id)responseObject {
-    
-    // 转换成 字符串
-    NSString *decodeJson = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-    NSLog(@"responseJson === > %@", decodeJson);
-    
-    if (!decodeJson) {
-        NSAssert(@" responseObject ===> %@", decodeJson);
-        return nil;
-    }
-    
-    NSLog(@"responseObject ===> %@", decodeJson);
-    
-    // 字符串转成流
-    NSData        *data      = [decodeJson dataUsingEncoding:NSUTF8StringEncoding];
-
-    // 转换字典
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    return dictionary;
-}
 
 #pragma Init AFHTTPSessionManager Method
 - (AFHTTPSessionManager *)swpSessionManager {

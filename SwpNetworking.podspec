@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "SwpNetworking"
-  s.version               = "1.0.3"
+  s.version               = "1.0.4"
   s.ios.deployment_target = '7.0'
   s.summary               = " AFNetworking 封装 "
   s.homepage              = "https://github.com/swp-song/SwpNetworking"
