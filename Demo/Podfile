@@ -9,8 +9,8 @@ target 'Demo' do
   # use_frameworks!
 
   # Pods for Demo
-  pod 'AFNetworking'	  # AFNetworking 网络请求
-  pod 'SVProgressHUD' 	# 提示信息库
+  pod 'AFNetworking'	# AFNetworking 网络请求
+  pod 'SVProgressHUD'	# 提示信息库
   pod 'Masonry'         # Masonry 自动布局框架
 
 end
